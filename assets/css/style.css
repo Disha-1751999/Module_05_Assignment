@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading{
+    text-align: center;
+    margin:30px 10px;
+  
+}
+.heading span{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 2px solid green;
+}
+section{
+    padding: 25px 0;
+}
+/* button 1 */
+
+.button1 {
+  margin: 30px;
+  width: 100px;
+  height: 50px;
+  background-color: #83eaf7;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  color: black;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.button1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff0095;
+  transition: all 0.3s;
+  border-radius: 10px;
+  z-index: -1;
+}
+.button1:hover {
+  color: #fff;
+}
+
+.button1:hover::before {
+  width: 100%;
+ 
+}
+
+/* button 2 */
+
+.button2 {
+    margin: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: #9dd67ba4;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+    border: none;
+    outline: none;
+    z-index: 1;
+  }
+  
+  .button2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:linear-gradient(to right, #237fbd , #a6c6db);
+    transition: all 0.3s;
+    border-radius: 10px;
+    z-index: -1;
+  }
+  .button2:hover {
+    color: #fff;
+  }
+  
+  .button2:hover::before {
+    width: 100%;
+   
+  }
+
+/* Button 3 */
+.button3 {
+
+    margin: 30px;
+    width: 100px;
+    height: 50px;
+  
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+    border: none;
+    outline: none;
+    z-index: 1;
+
+    
+    border: 3px solid #FF0072;
+    
+    color: #FF0072;
+   
+    transition: 0.3s ease all;
+    
+}
+
+.button3:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+}
+
+.button3:hover {
+    color: white;
+}
+
+.button3:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+} 
+
+/* button 4 */
+
+.button4 {
+    margin: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: #f9f047;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    color: #000;
+    border: none;
+    outline: none;
+    z-index: 1;
+  }
+  
+  .button4::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+    transition: all 0.3s;
+    border-radius: 10px;
+    z-index: -1;
+  }
+  .button4:hover {
+    color: #fff;
+  }
+  
+  .button4:hover::before {
+    height: 100%;
+   
+  }
+
+  
+
+/* button 5 */
+.button5 {
+  margin: 30px;
+  width: 100px;
+  height: 50px;
+  background-color: #454649;
+
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+  border: none;
+  outline: none;
+}
+.button5:hover{
+  background-color: #454649;
+  color: white;
+
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.button5::after,
+.button5::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 105%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 7px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.button5::before {
+  filter: blur(1.5rem);
+  opacity: 0.3;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* button 6 */
+
+.button6 {
+  margin: 30px;
+  width: 100px;
+  height: 50px;
+  background-color: #37383a;
+
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+  border: none;
+  outline: none;
+}
+.button6:hover{
+  background-color:  #37383a;
+  color: white;
+
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.button6::after,
+.button6::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 105%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 80%,
+    orange 20%
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 7px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.button6::before {
+  filter: blur(1.5rem);
+  opacity: 0.3;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+/* button 7 */
+
+.button7 {
+  margin: 30px;
+  width: 100px;
+  height: 50px;
+  background-color: #1c1f2b;
+
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+  border: none;
+  outline: none;
+}
+.button7:hover{
+  background-color:  #1c1f2b;
+  color: white;
+
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.button7::after,
+.button7::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 105%;
+  background-image: repeating-conic-gradient(
+    from var(--angle),
+    rgb(243, 15, 213) 0%,
+    rgb(243, 15, 213) 5%,
+    transparent 5%,
+    transparent 40%,
+    rgb(243, 15, 213) 50%
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 7px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.button7::before {
+  filter: blur(1.5rem);
+  opacity: 0.3;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* button 8 */
+
+.button8 {
+    margin: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 10px;
+    color: #008cff;
+    border: 1px solid #008cff ;
+    outline: none;
+    transition: all 0.3s ease-out;
+
+}
+.button8:hover{
+    background-color: #008cff;
+     text-shadow: -1px 0 #fff, 0 1px#fff, 1px 0 #fff, 0 -1px #fff;
+     letter-spacing: 5px;
+     transform: scaleX(1.2);
+    
+
+}
+/* button 9 */
+
+.button9 {
+    margin: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: #c0392b;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    border: none ;
+    outline: none;
+    transition: all 0.3s ease-out;
+    opacity: 0.4;
+
+}
+.button9:hover{
+   background-color: transparent;
+   transform: scale(1.2,1);
+   border-bottom: 2px solid #c0392b;
+   border-top: 2px solid #c0392b;
+   border-radius: 0;
+   color: #c0392b;
+   opacity: 1;
+    
+
+}  
+
+/* button 10 */
+
+.button10 {
+    margin: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 10px;
+    color: #c0392b;
+    border: none ;
+    position: relative;
+    font-weight: bold;
+   
+}
+
+.button10:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #c0392b;
+    transition: all .3s linear;
+}
+
+
+.button10:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.frontside .card{
+    min-height: 312px;
+}
+
+.frontside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/* Form */
+.form-container{
+    background-image: url("/assets/image/slava-auchynnikau-K_jVStI1PjM-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0px;
+    overflow: hidden;
+    
+}
+.blur-effect{
+    background: transparent;
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border: 1px solid rgb(207, 205, 205);
+}
+
+
+.form-group{
+    position: relative;
+}
+
+.form-group input{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(201, 198, 198);
+    border-radius: 0px;
+    
+}
+.form-group  .fa-user, .form-group  .fa-envelope, .form-group  .fa-eye-slash {
+    position: absolute;
+    right: 0;
+    bottom:0;
+    transform: translate(-50%, -50%);
+}
+
+
+.form-group svg path{
+  fill: green !important;
+}
+.forget-pass{
+  color: #454649;
+  text-decoration: none;
+  clear: both;
+}
+.forget-pass:hover{
+  color: #006aff;
+  text-decoration:underline;
+}
+.submit-button{
+  display: block;
+  margin: 50px auto !important;
+}
+
+/* progress-bar */
+
+.progress-title{
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+
+.progress{
+  height: 10px;
+  background: #e9e9ea;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: visible;
+  position: relative;
+}
+
+.progress:before,
+.progress:after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  z-index: 1;
+}
+
+.progress:after{
+  border: 7px solid #e9e9ea;
+  left: auto;
+  right: 0;
+}
+
+.progress .progress-bar{
+  box-shadow: none;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+ animation: animate-positive 1s;
+}
+
+.progress .progress-value{
+  width: 70px;
+  height: 35px;
+  line-height: 27px;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  top: -14px;
+  right: 0;
+  z-index: 2;
+}
+
+.progress.orange:before{ border: 7px solid #fe3b3b; }
+
+.progress.blue:before{ border: 7px solid #1a4966; }
+
+.progress.green:before{ border: 7px solid #53aa2c; }
+
+
+
+.progress.orange .progress-value{
+  border: 5px solid #fe3b3b;
+  color: #fe3b3b;
+}
+
+.progress.blue .progress-value{
+  border: 5px solid #1a4966;
+  color: #1a4966;
+}
+
+.progress.green .progress-value{
+  border: 5px solid #53aa2c;
+  color: #53aa2c;
+}
+
+
+@keyframes animate-positive{
+  0%{ width: 0; }
+}
+
